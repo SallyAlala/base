@@ -64,7 +64,7 @@ The figure below illustrates this behavior using an example.
 1. Later, the joystick is set to a negative position for one time unit, making the reference speed to decrease as well.
 
 
-# RETELAB1 \
-## 2. meres \
-*esku tudom a markdownt* \
+# RETELAB1 
+## 2. meres 
+*esku tudom a markdownt* 
 **megy ez
