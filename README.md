@@ -67,4 +67,4 @@ The figure below illustrates this behavior using an example.
 # RETELAB1 
 ## 2. meres 
 *esku tudom a markdownt* 
-**megy ez
+**megy ez**
