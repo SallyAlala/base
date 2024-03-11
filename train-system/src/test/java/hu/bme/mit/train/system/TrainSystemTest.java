@@ -56,5 +56,11 @@ public class TrainSystemTest {
         Assert.assertEquals(sensor.getSpeedLimit(), 3);
     }
 
+	@Test
+    public void tachoGraphTest() {
+        sensor.writeTachoGraph(2, 30);
+        Assert.assertEquals(sensor.getTableSize(), 1);
+    }
+
 	
 }
