@@ -97,5 +97,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: coverage-results-report
-          path: target/site/jacoco/
+          path: train-sensor/target/site/jacoco/
           if-no-files-found: error
