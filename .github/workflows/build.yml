@@ -84,11 +84,11 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: integration-tests-jacoco
-          path: target/
+          path: train-sensor/target/
       - uses: actions/download-artifact@v2
         with:
           name: unit-tests-jacoco
-          path: target/
+          path: train-sensor/target/
       - name: merge results
         run: |
           mvn jacoco:merge package jacoco:report verify -DskipTests=true -DfailIfNoTests=false
