@@ -30,7 +30,7 @@ public class TrainSystem {
 
 	public void func(){
 		th.start();
-		for(int i = 0; i < 500; i++)
+		for(int i = 0; i < 1000; i++)
 		{
 			controller.followSpeed();
 			try {
