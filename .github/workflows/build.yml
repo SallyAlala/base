@@ -46,7 +46,7 @@ jobs:
           java-version: '17'
       - name: Run tests
         run: |
-          mvn '-Dtest=!*IntegrationTest' verify -Djacoco.destFile=exportJacoco/jacoco-fast.exec
+          mvn '-Dtest=!*IntegrationTest' verify -Djacoco.destFile=exportJacoco/jacoco-fast.exec -DfailIfNoTests=false
       - name: Upload jacoco exec results
         uses: actions/upload-artifact@v2
         with:
@@ -63,7 +63,7 @@ jobs:
           java-version: '17'
       - name: Run tests
         run: |
-          mvn '-Dtest=*IntegrationTest' verify -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
+          mvn '-Dtest=*IntegrationTest' verify -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec -DfailIfNoTests=false
       - name: Upload jacoco exec results
         uses: actions/upload-artifact@v2
         with:
@@ -91,7 +91,7 @@ jobs:
           path: target/
       - name: merge results
         run: |
-          mvn jacoco:merge package jacoco:report verify -DskipTests=true
+          mvn jacoco:merge package jacoco:report verify -DskipTests=true -DfailIfNoTests=false
       - name: Upload jacoco coverage despite the check result
         if: ${{ always() }}
         uses: actions/upload-artifact@v2
