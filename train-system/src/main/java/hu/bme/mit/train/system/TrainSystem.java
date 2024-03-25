@@ -6,6 +6,8 @@ import hu.bme.mit.train.interfaces.TrainSensor;
 import hu.bme.mit.train.interfaces.TrainUser;
 import hu.bme.mit.train.sensor.TrainSensorImpl;
 import hu.bme.mit.train.user.TrainUserImpl;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class TrainSystem {
 
@@ -23,6 +25,15 @@ public class TrainSystem {
 
 	public TrainUser getUser() {
 		return user;
+	}
+
+	public void setRefSpeed(){
+		Timer timer = new Timer();
+ 		timer.schedule(new TimerTask(){
+    		public void run() {
+				controller.followSpeed();
+			}
+  		}, 0, 3000);
 	}
 
 }

@@ -14,10 +14,11 @@ public class TrainSystemTest {
 	TrainController controller;
 	TrainSensor sensor;
 	TrainUser user;
+	TrainSystem system;
 	
 	@Before
 	public void before() {
-		TrainSystem system = new TrainSystem();
+		system = new TrainSystem();
 		controller = system.getController();
 		sensor = system.getSensor();
 		user = system.getUser();
@@ -61,4 +62,6 @@ public class TrainSystemTest {
         sensor.writeTachoGraph(2, 30);
         Assert.assertEquals(sensor.getTableSize(), 1);
     }
+
+	
 }
