@@ -38,8 +38,6 @@ jobs:
 
   merge-jacoco-report:
     name: Jacoco Merge Results
-    needs:
-      - unit-tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
