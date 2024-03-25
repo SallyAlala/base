@@ -61,4 +61,6 @@ public class TrainSystemTest {
         sensor.writeTachoGraph(2, 30);
         Assert.assertEquals(sensor.getTableSize(), 1);
     }
+
+	
 }

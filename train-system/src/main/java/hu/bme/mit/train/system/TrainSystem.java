@@ -28,12 +28,16 @@ public class TrainSystem {
 		return user;
 	}
 
-	public void func(controller, th){
+	public void func(){
 		th.start();
 		for(int i = 0; i < 500; i++)
 		{
 			controller.followSpeed();
-			th.sleep(50);
+			try {
+				th.sleep(10000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
